@@ -50,7 +50,7 @@ body {
   background-color: rgba(124, 135, 152, 0.2);
   padding: 10px;
   border-radius: 50%;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .ratingCard .card-wrapper h1 {
@@ -64,39 +64,54 @@ body {
   line-height: 1.5em;
 }
 
-.ratingCard .card-wrapper .rating ul {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+.ratingCard .card-wrapper .rating {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 15px 0 15px 0;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 15px 0;
 }
 
-.ratingCard .card-wrapper .rating ul li {
-  margin: 0 10px;
-  padding: 15px 21px;
+.ratingCard .card-wrapper .rating #ratingForm input[type="radio"] {
+  margin: 0 5px;
+  width: 4rem;
+  height: 4rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background-color: rgba(124, 135, 152, 0.2);
+  color: white;
   border-radius: 50%;
-  list-style-type: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.ratingCard .card-wrapper .rating #ratingForm input[type="radio"]:hover {
+  background-color: #fb7413;
+}
+
+.ratingCard .card-wrapper .rating #ratingForm input[type="radio"]:checked {
+  background-color: #959eac;
+}
+
+.ratingCard .card-wrapper .rating #ratingForm label {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  cursor: pointer;
-  -webkit-transition: 0.7s ease-in-out;
-  transition: 0.7s ease-in-out;
-  font-weight: 700;
-  color: #7c8798;
-}
-
-.ratingCard .card-wrapper .rating ul li:hover {
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
-  background-color: rgba(255, 255, 255, 0.5);
-  color: white;
+  position: relative;
+  top: -45px;
+  left: 30px;
 }
 
 .ratingCard .card-wrapper .submit {
@@ -107,7 +122,11 @@ body {
   cursor: pointer;
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
-  margin: 15px 0;
+  margin: 0 0 15px 0;
+  color: white;
+  letter-spacing: .2rem;
+  font-weight: 700;
+  width: 100%;
 }
 
 .ratingCard .card-wrapper .submit:hover {

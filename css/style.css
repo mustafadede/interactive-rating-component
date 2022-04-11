@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 15px;
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  color: white;
+  overflow: hidden;
+  margin: 0 auto;
+  padding-top: 100px;
+  width: 50%;
+  background-color: #121417;
+}
+
+.card {
+  text-align: left;
+  background-color: #252d37;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 400px;
+  padding: 35px;
+  margin: 0 auto;
+  border-radius: 5%;
+}
+
+.card h1 {
+  font-size: 2rem;
+}
+
+.ratingCard img {
+  background-color: rgba(124, 135, 152, 0.1);
+  border-radius: 50%;
+  padding: 15px;
+  margin-bottom: 25px;
+}
+
+.ratingCard h1 {
+  margin-bottom: 10px;
+}
+
+.ratingCard .desc {
+  color: #7c8798;
+  font-weight: 700;
+  margin-bottom: 25px;
+  width: 360px;
+}
+
+.ratingCard .rating {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-bottom: 25px;
+}
+
+.ratingCard .rating ul {
+  list-style-type: none;
+}
+
+.ratingCard .rating ul li {
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  background-color: rgba(124, 135, 152, 0.1);
+  border-radius: 50%;
+  padding: 12px;
+  font-weight: 700;
+  margin: 0 10px 0 10px;
+  color: #7c8798;
+  font-size: 1.5rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  -webkit-transition: 2s ease-in-out;
+  transition: 2s ease-in-out;
+}
+
+.ratingCard .rating ul li:hover {
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.ratingCard .submit {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 1rem;
+  border: 0;
+  background-color: #fb7413;
+  color: white;
+  letter-spacing: .2rem;
+  font-weight: 700;
+  border-radius: 25px;
+  cursor: pointer;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+.ratingCard .submit:hover {
+  background-color: white;
+  color: #fb7413;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+.resultCard {
+  visibility: hidden;
+}
+/*# sourceMappingURL=style.css.map */

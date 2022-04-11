@@ -1,0 +1,103 @@
+@import "variables";
+@import "resets";
+
+body {
+  font-family: "Overpass", sans-serif;
+  color: $white;
+  overflow: hidden;
+  margin: 0 auto;
+  padding-top: 100px;
+  width: 50%;
+  background-color: $very-dark-blue;
+}
+
+.card {
+  text-align: left;
+  background-color: $dark-blue;
+  width: fit-content;
+  height: 400px;
+  padding: 35px;
+  margin: 0 auto;
+  border-radius: 5%;
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+.ratingCard {
+  img {
+    background-color: rgba(124, 135, 152, 0.1);
+    border-radius: 50%;
+    padding: 15px;
+    margin-bottom: 25px;
+  }
+
+  h1 {
+    margin-bottom: 10px;
+  }
+
+  .desc {
+    color: $medium-grey;
+    font-weight: font-weights(bold);
+    margin-bottom: 25px;
+    width: 360px;
+  }
+
+  .rating {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-bottom: 25px;
+    ul {
+      list-style-type: none;
+      li {
+        text-align: center;
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+        background-color: rgba(124, 135, 152, 0.1);
+        border-radius: 50%;
+        padding: 12px;
+        font-weight: font-weights(bold);
+        margin: 0 10px 0 10px;
+        color: $medium-grey;
+        font-size: 1.5rem;
+        user-select: none;
+        cursor: pointer;
+        transition: 2s ease-in-out;
+        &:hover {
+            transition: .5s ease-in-out;
+            color: $white;
+            background-color: rgba(255, 255, 255,.5);
+        }
+      }
+    }
+
+    
+  }
+
+  .submit {
+      width: 100%;
+      padding: 10px 0;
+      font-size: 1rem;
+      border: 0;
+      background-color: $primary;
+      color: $white;
+      letter-spacing: .2rem;
+      font-weight: font-weights(bold);
+      border-radius: 25px;
+      cursor: pointer;
+      transition: 1s ease-in-out;
+      &:hover {
+          background-color: $white;
+          color: $primary;
+          transition: .5s ease-in-out;
+      }
+
+  }
+}
+
+.resultCard {
+  visibility: hidden;
+}

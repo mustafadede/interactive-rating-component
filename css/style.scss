@@ -1,17 +1,60 @@
 @import "variables";
 @import "resets";
 
+@mixin body-media {
+  @media (max-width:375px) {
+    padding-top: 11em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@mixin card-media {
+  @media (max-width: 375px) {
+    padding: 15px 0 15px 0;
+    width: 370px;
+    img {
+      margin-top:25px;
+      margin-left:25px;
+    }
+
+    h1 {
+      margin-left:25px;
+
+    }
+    .desc {
+      width: 320px;
+      margin-left:25px;
+
+    }
+    .rating {
+      transform: scale(.9);
+    }
+    .submit {
+      transform: scale(.9);
+      font-size: 1.5rem;
+    }
+  }
+}
+
 body {
+  @include body-media;
   font-family: "Overpass", sans-serif;
   color: $white;
   overflow: hidden;
   margin: 0 auto;
-  padding-top: 100px;
-  width: 50%;
+  padding-top: 7em;
+  width: fit-content;
   background-color: $very-dark-blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .card {
+  @include card-media;
   text-align: left;
   background-color: $dark-blue;
   width: fit-content;

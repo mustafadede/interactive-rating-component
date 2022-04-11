@@ -10,7 +10,6 @@ This is a solution to the [Interactive rating component challenge on Frontend Me
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [Continued development](#continued-development)
 - [Author](#author)
 
 **Note: Delete this note and update the table of contents based on what sections you keep.**
@@ -42,10 +41,6 @@ Users should be able to:
 - HTML5
 - SASS
 - Flexbox
-
-### Continued development
-
-I will add mobile view to this. For now it's only desktop.
 
 ## Author
 

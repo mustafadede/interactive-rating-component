@@ -2,29 +2,39 @@
 @import "resets";
 
 @mixin media {
-  @media (max-width: 540px) {
-    transform: scale(.8);
-    left:.2em;
+  @media (max-width: 640px) {
+    transform: scale(.7);
     .desc {
       width: 85%;
     }
   }
+}
 
+@mixin body-media {
+  @media (max-width:1200px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
 }
 
 body {
+  @include body-media;
   background-color: $very-dark-blue;
   color: $white;
   font-family: "Overpass", sans-serif;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 6em 0;
 }
 
 .ratingCard {
   @include media;
-  position: relative;
-  top: 95px;
-  left: 34%;
   .card-wrapper {
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -40,7 +50,6 @@ body {
     }
 
     h1 {
-      font-size: 2rem;
       margin-bottom: 1rem;
     }
 
@@ -113,8 +122,50 @@ body {
   height: 405px;
   background-color: $dark-blue;
   border-radius: 24px;
+  h1 {
+    font-size: 2rem;
+  }
 }
 
 .resultCard {
   visibility: hidden;
+  position: relative;
+  top: -350px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  img {
+    width: 35%;
+  }
+
+  .given {
+    color: $primary;
+    background-color: rgba(124, 135, 152, 0.2);
+    padding: .3em 1em;
+    border-radius: 25px;
+  }
+  .title {
+    position: relative;
+    top: -.1em;
+  }
+
+  .desc {
+    position: relative;
+    top: -1.7em;
+    width: 89%;
+    color: $medium-grey;
+    font-weight: font-weights(bold);
+    text-align: center;
+  }
+}
+
+
+.notVisible {
+  visibility: hidden;
+}
+
+.Visible {
+  visibility: visible;
 }

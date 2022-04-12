@@ -11,19 +11,37 @@ body {
   color: white;
   font-family: "Overpass", sans-serif;
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 6em 0;
 }
 
-.ratingCard {
-  position: relative;
-  top: 95px;
-  left: 34%;
+@media (max-width: 1200px) {
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
-@media (max-width: 540px) {
+@media (max-width: 640px) {
   .ratingCard {
-    -webkit-transform: scale(0.8);
-            transform: scale(0.8);
-    left: .2em;
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
   }
   .ratingCard .desc {
     width: 85%;
@@ -54,7 +72,6 @@ body {
 }
 
 .ratingCard .card-wrapper h1 {
-  font-size: 2rem;
   margin-bottom: 1rem;
 }
 
@@ -143,7 +160,59 @@ body {
   border-radius: 24px;
 }
 
+.card h1 {
+  font-size: 2rem;
+}
+
 .resultCard {
   visibility: hidden;
+  position: relative;
+  top: -350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.resultCard img {
+  width: 35%;
+}
+
+.resultCard .given {
+  color: #fb7413;
+  background-color: rgba(124, 135, 152, 0.2);
+  padding: .3em 1em;
+  border-radius: 25px;
+}
+
+.resultCard .title {
+  position: relative;
+  top: -.1em;
+}
+
+.resultCard .desc {
+  position: relative;
+  top: -1.7em;
+  width: 89%;
+  color: #7c8798;
+  font-weight: 700;
+  text-align: center;
+}
+
+.notVisible {
+  visibility: hidden;
+}
+
+.Visible {
+  visibility: visible;
 }
 /*# sourceMappingURL=style.css.map */
